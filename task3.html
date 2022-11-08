@@ -8,6 +8,16 @@
 </head>
 <body>
     <div id="container"></div>
-    
+
+    <script type="application/javascript">
+        const container = document.getElementById('container');
+        for (i = 0; i < 5; i++){
+            const div = document.createElement('div')
+            div.className = 'element'
+            container.appendChild(div)
+            const index = Array.from(div.parentElement.children).indexOf(div);
+            div.innerText = `element ${index+1}`;
+        }
+    </script>
 </body>
 </html>
